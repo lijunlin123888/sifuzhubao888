@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四福珠宝 - 贵金属价格</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #d62929;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        th {
+            background-color: #d62929;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f1c0c0;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .contact p {
+            margin: 5px 0;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>四福珠宝 - 贵金属价格</h1>
+        <p>联系电话：李军林 18547859119</p >
+        <p>地址：阿拉善左旗石博园北门四福珠宝</p >
+        <table>
+            <tr>
+                <th>商品</th>
+                <th>回购价格 (元/克)</th>
+                <th>销售价格 (元/克)</th>
+                <th>高低价格</th>
+            </tr>
+            <tr>
+                <td>黄金</td>
+                <td id="gold-buy">0</td>
+                <td id="gold-sell">0</td>
+                <td>670.80 - 670.30</td>
+            </tr>
+            <tr>
+                <td>白银</td>
+                <td id="silver-buy">0</td>
+                <td id="silver-sell">0</td>
+                <td>7.40 - 7.40</td>
+            </tr>
+            <tr>
+                <td>铂金</td>
+                <td id="platinum-buy">0</td>
+                <td id="platinum-sell">0</td>
+                <td>226.50 - 226.50</td>
+            </tr>
+            <tr>
+                <td>周大福黄金</td>
+                <td>N/A</td>
+                <td id="chow-tai-fook-sell">0</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>六福珠宝黄金</td>
+                <td>N/A</td>
+                <td id="luk-fook-sell">0</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+        <div class="contact">
+            <p>声明：以上行情仅供参考！！</p >
+            <p>公司名称：阿拉善左旗石博园北门四福珠宝</p >
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 四福珠宝. All rights reserved.</p >
+        </div>
+    </div>
+    <script>
+        // 从本地存储获取价格并显示
+        document.getElementById('gold-buy').textContent = localStorage.getItem('gold-buy') || '0';
+        document.getElementById('gold-sell').textContent = localStorage.getItem('gold-sell') || '0';
+        document.getElementById('silver-buy').textContent = localStorage.getItem('silver-buy') || '0';
+        document.getElementById('silver-sell').textContent = localStorage.getItem('silver-sell') || '0';
+        document.getElementById('platinum-buy').textContent = localStorage.getItem('platinum-buy') || '0';
+        document.getElementById('platinum-sell').textContent = localStorage.getItem('platinum-sell') || '0';
+        document.getElementById('chow-tai-fook-sell').textContent = localStorage.getItem('chow-tai-fook-sell') || '0';
+        document.getElementById('luk-fook-sell').textContent = localStorage.getItem('luk-fook-sell') || '0';
+    </script>
+</body>
+</html>
